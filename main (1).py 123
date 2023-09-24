@@ -1,0 +1,16 @@
+class Solution:
+   def solve(self, x, y, z):
+      temp_set = set()
+      remove = set()
+      for i in [x, y, z]:
+         if i in temp_set:
+            remove.add(i)
+         temp_set.add(i)
+      for i in remove:
+         temp_set.remove(i)
+      multiplied = 1
+      for i in temp_set:
+         multiplied *= i
+      return multiplied
+ob = Solution()
+print(ob.solve(5, 4, 2))

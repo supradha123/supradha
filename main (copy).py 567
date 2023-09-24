@@ -1,0 +1,19 @@
+my_list = [[11, 24, 84], [24, 55, 11], [7, 11, 9]]
+
+print("The list is :")
+print(my_list)
+
+my_result = True
+
+for index in range(len(my_list[0])):
+
+   column = [ele[index] for ele in my_list]
+
+   if len(list(set(column ))) != len(column ):
+      my_result = False
+      break
+
+if(my_result == True):
+   print("All columns are unique")
+else:
+   print(("All columns are not unique"))
